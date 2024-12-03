@@ -52,7 +52,17 @@ print("\n")
 
 print("*** PROBLEM 4.0: BASEBALL WINNERS POSITION")
 // Imagine you're on a baseball team nearing the end of the season. Create a leaguePosition constant with a value of 1. Using a switch statement, print "Champions!" if the leaguePosition is 1 (case 1), "Runners up" if the value is 2 (case 2), "Third place" if the value is 3 (case 3), and "Bad season!" in all other cases.
-    
+let LeaguePosition = 1
+switch LeaguePosition {
+case 1:
+    print("Champions")
+case 2:
+    print("Runners up")
+case 3:
+    print("Third place")
+default:
+    print("Bad season!")
+}
 
 //Test your code by changing leaguePosition values and observe the results.
 
@@ -62,7 +72,13 @@ print("\n")
 
 
 print("*** PROBLEM 4.1: MEDAL WINNERS")
-    
+  
+switch LeaguePosition {
+case 1...3:
+    print("Medal winner")
+default:
+    print("No medal awarded")
+}
     
 // Write a new switch statement that prints "Medal winner" if leaguePosition is within the range of 1-3 (case 1, case 2, case 3). Otherwise, print "No medal awarded" (default).
     
@@ -107,5 +123,19 @@ print("*** PROBLEM 4.2: HEART RANGE STATEMENTS")
  If currentHR is above the listed zones, print some kind of warning asking the user to slow down (default).
  
  */
-
+let currentHR = 180
+switch currentHR {
+case 100...120:
+    print("You are in the Very Light Zone. Activity in this zone helps with recovery.")
+case 121...140:
+    print("You are in the Light zone. Activity in this zone helps improve endurance and fat burning.")
+case 141...160:
+    print("You are in the Moderate zone. Activity in this zone helps improve aerobic fitness.")
+case 161...180:
+    print("You are in the Hard zone. Activity in this zone increases maximum pefromance capacity for shorter sessions.")
+case 181...200:
+    print("You are in the Maximum zone. Activity in this zone helps fit atheletes develop speed.")
+default:
+    print("SLOW DOWN!")
+}
 //First declare a constant currentHR and for now give it a value of 128.
